@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IMF Countries</title>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='homepage.css') }}" />
+
+    <script type="text/javascript">
+        function renderCountriesPage(responseText) {
+            // renders lists within the 7 tables in the html
+            var responseList = JSON.parse(responseText);
+            var responseListCounter = 0;
+            var table_name = 'countries_table_';
+            var resultsTableElement;
+            // = document.getElementById("countries_table_0");
+            for (var i = 0; i < 8; i++) {
+                var tableBody = '';
+                var specific_table_name = table_name+i;
+                for (var j = 0; j < 27; j++) {
+                    resultsTableElement = document.getElementById(specific_table_name);
+                    tableBody += '<tr><td>'+responseList[responseListCounter]['country_name']+'</td></tr>';
+                    responseListCounter++;
+                    resultsTableElement.innerHTML = tableBody;
+                }
+                
+            }
+        }
+
+        function createCountriesPage() {
+            var url = '/countries_json/';
+
+            xmlHttpRequest = new XMLHttpRequest();
+            xmlHttpRequest.open('get', url);
+
+            xmlHttpRequest.onreadystatechange = function() {
+                if (xmlHttpRequest.readyState == 4 && xmlHttpRequest.status == 200) { 
+                    renderCountriesPage(xmlHttpRequest.responseText);
+                }
+            };
+
+            xmlHttpRequest.send(null);
+        }
+
+
+    </script>
+
+</head>
+
+<body onload="createCountriesPage()">
+    <div id="link_to_home">
+
+        <p align="left"><a href="http://thacker.mathcs.carleton.edu:5119/">Go back to homepage</a></p>
+
+    </div>
+    <div id="header">
+
+        <h1 align="left">Countries in the IMF</h1>
+
+    </div>
+    <div id="countries_table_div">
+
+        <table class="countrytable" id="countries_table_0" align="center"></table>
+        <table class="countrytable" id="countries_table_1" align="center"></table>
+        <table class="countrytable" id="countries_table_2" align="center"></table>
+        <table class="countrytable" id="countries_table_3" align="center"></table>
+        <table class="countrytable" id="countries_table_4" align="center"></table>
+        <table class="countrytable" id="countries_table_5" align="center"></table>
+        <table class="countrytable" id="countries_table_6" align="center"></table>
+        <table class="countrytable" id="countries_table_7" align="center"></table>
+
+    </div>
+  </body>
+</html>

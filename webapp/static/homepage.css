@@ -1,0 +1,99 @@
+/*
+	For use with homepage.html
+	Matt Javaly & Elliot Mawby, 12 May 2016
+
+	Adapted from Jeff Ondich, 5 May 2016
+*/
+
+body {
+    background-color: #CCE7FF;
+    font-family: 'Palatino Linotype', ‘Book Antiqua’, Palatino, serif;
+}
+
+h1 {
+	padding-bottom: 2px;
+	background-color: #F0F0F0;
+}
+
+.stat-header{
+	font-size: 120;
+}
+
+/*
+Button designed using:
+https://css-tricks.com/examples/ButtonMaker/ 
+*/
+.searchButton {
+   border-top: 1px solid #96d1f8;
+   background: #65a9d7;
+   background: -webkit-gradient(linear, left top, left bottom, from(#3e779d), to(#65a9d7));
+   background: -webkit-linear-gradient(top, #3e779d, #65a9d7);
+   background: -moz-linear-gradient(top, #3e779d, #65a9d7);
+   background: -ms-linear-gradient(top, #3e779d, #65a9d7);
+   background: -o-linear-gradient(top, #3e779d, #65a9d7);
+   padding: 11px 22px;
+   -webkit-border-radius: 40px;
+   -moz-border-radius: 40px;
+   border-radius: 40px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: white;
+   font-size: 19px;
+   font-family: 'Lucida Grande', Helvetica, Arial, Sans-Serif;
+   text-decoration: none;
+   vertical-align: middle;
+}
+.searchButton:hover {
+   border-top-color: #28597a;
+   background: #28597a;
+   color: #ccc;
+}
+.searchButton:active {
+   border-top-color: #1b435e;
+   background: #1b435e;
+}
+
+.countrytable {
+	display: inline-block;
+	border: 0px;
+	border-collapse: collapse;
+}
+
+.error_msg {
+	text-align: center;
+}
+
+#search_div {
+	margin: auto;
+	width:12%;
+	text-align: center;
+}
+
+#links_div {
+	margin: auto;
+	width: 75%;
+	text-align: right;
+}
+
+#second_banner, #first_banner{
+	padding: 1;
+	text-align: center;
+}
+
+#second_banner {
+	background-color: #E0E0E0;
+}
+
+
+#countries_table_div {
+	text-align: left;
+}
+
+#assignment_content {
+	text-align: center;
+}
+
+
+

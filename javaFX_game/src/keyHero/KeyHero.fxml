@@ -1,0 +1,32 @@
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane fx:id="mainScreen" fx:controller="keyHero.Controller" xmlns:fx="http://javafx.com/fxml" style="-fx-background-color: ALICEBLUE">
+
+    <Rectangle fx:id="scoreBar" AnchorPane.bottomAnchor="425" layoutX="140" width="75" height="300" fill="TRANSPARENT" stroke="BLACK" />
+    <Rectangle fx:id="scoreBarFill" AnchorPane.bottomAnchor="425" layoutX="140" width="75" height="0" fill="GREEN" stroke="TRANSPARENT" />
+
+    <Label fx:id="levelLabel" text="Level: 1" layoutX="150" AnchorPane.bottomAnchor="375" scaleX="3" scaleY="3"/>
+
+    <Button fx:id="startButton" text="Start" layoutX="150" AnchorPane.bottomAnchor="275" scaleX="3" scaleY="3" onAction="#onStartButton"/>
+
+    <Label fx:id="dialogueLabel1" text=" " layoutX="30" AnchorPane.bottomAnchor="85" AnchorPane.leftAnchor="100" scaleX="2" scaleY="2"/>
+    <Label fx:id="dialogueLabel2" text=" " layoutX="30" AnchorPane.bottomAnchor="115" AnchorPane.leftAnchor="135" scaleX="3" scaleY="3"/>
+
+    <AnchorPane fx:id="gameBoard"
+                AnchorPane.topAnchor="0" AnchorPane.leftAnchor="350" AnchorPane.rightAnchor="0" AnchorPane.bottomAnchor="0"
+                style="-fx-background-color: #bbb; -fx-border-color:black; -fx-border-width:1px 0px 1px 0px; -fx-background-image:url('res/background.png');" >
+
+
+
+        <Rectangle fx:id="boxLeft" AnchorPane.bottomAnchor="50" layoutX="150" width="75" height="75" fill="TRANSPARENT" stroke="YELLOW" strokeWidth="5" />
+        <Rectangle fx:id="boxDown" AnchorPane.bottomAnchor="50" layoutX="250" width="75" height="75" fill="TRANSPARENT" stroke="YELLOW" strokeWidth="5" />
+        <Rectangle fx:id="boxUp" AnchorPane.bottomAnchor="50" layoutX="350" width="75" height="75" fill="TRANSPARENT" stroke="YELLOW" strokeWidth="5"/>
+        <Rectangle fx:id="boxRight" AnchorPane.bottomAnchor="50" layoutX="450" width="75" height="75" fill="TRANSPARENT" stroke="YELLOW" strokeWidth="5" />
+        <Label fx:id="startLabel" textFill="YELLOW" layoutX="200" text="Click the button or press space to start!" AnchorPane.bottomAnchor="375" scaleX="2" scaleY="2"/>
+
+    </AnchorPane>
+
+</AnchorPane>
+

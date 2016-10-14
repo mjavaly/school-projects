@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IMF Economic Data Browser</title>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='homepage.css') }}" />
+    <style>
+        table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        }  
+        th, td {
+        padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <script type="text/javascript" src='static/homepage.js'></script>
+    <div id="links_div">
+        
+        <p><a href="http://thacker.mathcs.carleton.edu:5119/statistics">Information on our statistics</a> | <a href="http://thacker.mathcs.carleton.edu:5119/countries">List of available countries</a></p>
+
+    </div>
+    <div id="first_banner">
+
+        <h1>IMF World Economic Data Browser</h1>
+
+    </div>
+    <div id="second_banner">
+
+        <h3>Search IMF data anywhere from 1980 to 2010. Missing</h3>
+
+    </div>
+    <div id="assignment_content">
+
+        <input id="countries" placeholder="Countries ex: Canada, Mexico" size="40"/>
+        <input id='years' placeholder="Years ex: 1990, 1991, 1995-2000" size="40"/>
+        <button id='all_years' style='background-color: white' onclick="onAllYearsButton('years')">All Years</button>
+        <p>Select one or more stats from the list below and search!</p>
+        <p><button id="gdp_stat" style="background-color: white" onclick="onStatButton(this)">GDP</button>
+        <button id="gdp_per_cap_stat" style="background-color: white" onclick="onStatButton(this)">GDP per capita</button>
+        <button id="unemployment_stat" style="background-color: white" onclick="onStatButton(this)">Unemployment</button>
+        <button id="population_stat" style="background-color: white" onclick="onStatButton(this)">Population</button></p>
+        <p><button id="debt_stat" style="background-color: white" onclick="onStatButton(this)">Debt</button>
+        <button id="revenue_stat" style="background-color: white" onclick="onStatButton(this)">Revenue</button>
+        <button id="inflation_stat" style="background-color: white" onclick="onStatButton(this)">Inflation</button></p>
+        <p><button id="all_stats" style="background-color: white" onclick="onAllStatsButton(this)">All Stats</button></p>
+
+    </div>
+    <div id="search_div">
+        
+        <p><button class="searchButton" id="Search"; onclick="onSearchButton()">Search</button></p>
+
+    </div>
+    <div id="table_div">
+
+        <table id="results_table" align="center"></table>
+
+    </div>
+    <div id="error_div">
+
+        <p id="error_msg" align="center"></p>
+
+    </div>   
+  </body>
+</html>
